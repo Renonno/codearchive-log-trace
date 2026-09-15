@@ -1,8 +1,8 @@
 {
   "schema": "log-trace-content-v1",
-  "version": 2,
-  "name": "ログ追跡編カスタムカード設定",
-  "exportedAt": "2026-09-15T11:21:10.879Z",
+  "version": 3,
+  "name": "ログ追跡編カード設定（全カード・ホバー作戦メモ）",
+  "exportedAt": "2026-09-15T11:50:10.0070742Z",
   "vocabulary": {
     "students": [
       "アル",
@@ -339,5 +339,1294 @@
       "水中用フレシェット弾"
     ]
   },
-  "cardNotes": {}
+  "cardNotes": {
+    "students::アル": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::エイミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::ハルナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::ヒフミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ヒナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::ホシノ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "アビドス高等学校 所属の生徒。"
+    },
+    "students::イオリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::マキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::ネル": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::イズミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::シロコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "アビドス高等学校 所属の生徒。"
+    },
+    "students::シュン": {
+      "label": "STUDENT AFFILIATION",
+      "text": "山海経高級中学校 所属の生徒。"
+    },
+    "students::スミレ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::ツルギ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::イズナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::アリス": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::ミドリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::チェリノ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "レッドウィンター連邦学園 所属の生徒。"
+    },
+    "students::ユズ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::アズサ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::コハル": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ナツ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ワカモ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "特別存在・所属不明 所属の生徒。"
+    },
+    "students::ミモリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::ウイ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ヒナタ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::マリナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "レッドウィンター連邦学園 所属の生徒。"
+    },
+    "students::ミヤコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "SRT特殊学園 所属の生徒。"
+    },
+    "students::ミユ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "SRT特殊学園 所属の生徒。"
+    },
+    "students::ツクヨ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::ミサキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "アリウス分校 所属の生徒。"
+    },
+    "students::アツコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "アリウス分校 所属の生徒。"
+    },
+    "students::サオリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "アリウス分校 所属の生徒。"
+    },
+    "students::カズサ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ココナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "山海経高級中学校 所属の生徒。"
+    },
+    "students::ノア": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::シグレ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "レッドウィンター連邦学園 所属の生徒。"
+    },
+    "students::ミネ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ミカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::メグ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::サクラコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::トキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::コユキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::カホ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::レイサ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ルミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "山海経高級中学校 所属の生徒。"
+    },
+    "students::ミナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "山海経高級中学校 所属の生徒。"
+    },
+    "students::メル": {
+      "label": "STUDENT AFFILIATION",
+      "text": "レッドウィンター連邦学園 所属の生徒。"
+    },
+    "students::イチカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::カスミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::御坂美琴": {
+      "label": "STUDENT AFFILIATION",
+      "text": "コラボレーション 所属の生徒。"
+    },
+    "students::食蜂操祈": {
+      "label": "STUDENT AFFILIATION",
+      "text": "コラボレーション 所属の生徒。"
+    },
+    "students::ユカリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::レンゲ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::キキョウ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::ウミカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::キララ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::シロコ＊テラー": {
+      "label": "STUDENT AFFILIATION",
+      "text": "特別存在・所属不明 所属の生徒。"
+    },
+    "students::レイジョ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "山海経高級中学校 所属の生徒。"
+    },
+    "students::チアキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ワイルドハント芸術学院 所属の生徒。"
+    },
+    "students::セイア": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::レイ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "特別存在・所属不明 所属の生徒。"
+    },
+    "students::ヒカリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ハイランダー鉄道学園 所属の生徒。"
+    },
+    "students::ノゾミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ハイランダー鉄道学園 所属の生徒。"
+    },
+    "students::ナグサ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::エリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ワイルドハント芸術学院 所属の生徒。"
+    },
+    "students::カノエ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ワイルドハント芸術学院 所属の生徒。"
+    },
+    "students::ミヨ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ワイルドハント芸術学院 所属の生徒。"
+    },
+    "students::フユ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ワイルドハント芸術学院 所属の生徒。"
+    },
+    "students::スバル": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ワイルドハント芸術学院 所属の生徒。"
+    },
+    "students::タカネ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ワイルドハント芸術学院 所属の生徒。"
+    },
+    "students::ケイ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::コノカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ハイランダー鉄道学園 所属の生徒。"
+    },
+    "students::レナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ハイランダー鉄道学園 所属の生徒。"
+    },
+    "students::ニコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ハイランダー鉄道学園 所属の生徒。"
+    },
+    "students::クルミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ハイランダー鉄道学園 所属の生徒。"
+    },
+    "students::ココロ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "オデュッセイア海洋高等学校 所属の生徒。"
+    },
+    "students::コトネ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "オデュッセイア海洋高等学校 所属の生徒。"
+    },
+    "students::アカネ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::チセ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::アカリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::ハスミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ノノミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "アビドス高等学校 所属の生徒。"
+    },
+    "students::カヨコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::ムツキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::ジュンコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::セリカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "アビドス高等学校 所属の生徒。"
+    },
+    "students::ツバキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::ユウカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::モモイ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::キリノ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ヴァルキューレ警察学校 所属の生徒。"
+    },
+    "students::モミジ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "レッドウィンター連邦学園 所属の生徒。"
+    },
+    "students::ハルカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::アスナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::コトリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::スズミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::フィーナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "レッドウィンター連邦学園 所属の生徒。"
+    },
+    "students::トモエ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "レッドウィンター連邦学園 所属の生徒。"
+    },
+    "students::フブキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ヴァルキューレ警察学校 所属の生徒。"
+    },
+    "students::ミチル": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::イブキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::アオバ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "特別存在・所属不明 所属の生徒。"
+    },
+    "students::ラブ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ヴァルキューレ警察学校 所属の生徒。"
+    },
+    "students::オトギ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "SRT特殊学園 所属の生徒。"
+    },
+    "students::ヒビキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::カリン": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::サヤ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "山海経高級中学校 所属の生徒。"
+    },
+    "students::マシロ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::初音ミク": {
+      "label": "STUDENT AFFILIATION",
+      "text": "コラボレーション 所属の生徒。"
+    },
+    "students::アコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::セナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::チヒロ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::サキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "SRT特殊学園 所属の生徒。"
+    },
+    "students::カエデ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::イロハ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::ヒヨリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "アリウス分校 所属の生徒。"
+    },
+    "students::モエ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "SRT特殊学園 所属の生徒。"
+    },
+    "students::ヒマリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::カンナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ヴァルキューレ警察学校 所属の生徒。"
+    },
+    "students::ナギサ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ミノリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "レッドウィンター連邦学園 所属の生徒。"
+    },
+    "students::マコト": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::キサキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "山海経高級中学校 所属の生徒。"
+    },
+    "students::サツキ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::リオ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::ニヤ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::リツ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "特別存在・所属不明 所属の生徒。"
+    },
+    "students::ヤクモ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "山海経高級中学校 所属の生徒。"
+    },
+    "students::エリカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "特別存在・所属不明 所属の生徒。"
+    },
+    "students::アイリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::フウカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::ハナエ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ハレ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::ウタハ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::アヤネ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "アビドス高等学校 所属の生徒。"
+    },
+    "students::シズコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "百鬼夜行連合学院 所属の生徒。"
+    },
+    "students::ハナコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::マリー": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::チナツ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::コタマ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ミレニアムサイエンススクール 所属の生徒。"
+    },
+    "students::ジュリ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "ゲヘナ学園 所属の生徒。"
+    },
+    "students::セリナ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::シミコ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ヨシミ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::ノドカ": {
+      "label": "STUDENT AFFILIATION",
+      "text": "トリニティ総合学園 所属の生徒。"
+    },
+    "students::佐天涙子": {
+      "label": "STUDENT AFFILIATION",
+      "text": "コラボレーション 所属の生徒。"
+    },
+    "figures::先生": {
+      "label": "CHARACTER FILE",
+      "text": "連邦捜査部シャーレの顧問。キヴォトスの生徒を支援する指揮官。"
+    },
+    "figures::アロナ": {
+      "label": "CHARACTER FILE",
+      "text": "シッテムの箱に在るAI。先生の任務支援を担う。"
+    },
+    "figures::プラナ": {
+      "label": "CHARACTER FILE",
+      "text": "別世界由来のシッテムの箱のAI。アロナと協力する。"
+    },
+    "figures::連邦生徒会長": {
+      "label": "CHARACTER FILE",
+      "text": "キヴォトスを統べた連邦生徒会長。現在は消息不明。"
+    },
+    "figures::七神リン": {
+      "label": "CHARACTER FILE",
+      "text": "連邦生徒会の行政官。キヴォトス全体の実務を統括する。"
+    },
+    "figures::岩櫃アユム": {
+      "label": "CHARACTER FILE",
+      "text": "連邦生徒会の幹部。危機対応と折衝を担当する。"
+    },
+    "figures::黒服": {
+      "label": "CHARACTER FILE",
+      "text": "ゲマトリア所属。生徒と神秘を観察・干渉する人物。"
+    },
+    "figures::マエストロ": {
+      "label": "CHARACTER FILE",
+      "text": "ゲマトリア所属。芸術と儀式に執着する研究者。"
+    },
+    "figures::ゴルコンダ": {
+      "label": "CHARACTER FILE",
+      "text": "ゲマトリア所属。神秘を求める研究者。"
+    },
+    "figures::ベアトリーチェ": {
+      "label": "CHARACTER FILE",
+      "text": "元アリウス分校の指導者。エデン条約事件に関わる。"
+    },
+    "figures::デカグラマトン": {
+      "label": "CHARACTER FILE",
+      "text": "預言と試練を実行する超常的な存在・システム。"
+    },
+    "figures::名もなき神々": {
+      "label": "CHARACTER FILE",
+      "text": "キヴォトス以前に関わる謎多き存在群。"
+    },
+    "figures::プレナパテス": {
+      "label": "CHARACTER FILE",
+      "text": "別世界の先生に相当する存在。シロコ＊テラーと行動した。"
+    },
+    "figures::アトラ・ハシース": {
+      "label": "CHARACTER FILE",
+      "text": "古代の施設・システム群に関わる名。"
+    },
+    "figures::カイザー総帥": {
+      "label": "CHARACTER FILE",
+      "text": "カイザーコーポレーションを率いる最高責任者。"
+    },
+    "enemies::カイザーコーポレーション": {
+      "label": "THREAT FILE",
+      "text": "カイザーコーポレーション — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::カイザーPMC": {
+      "label": "THREAT FILE",
+      "text": "カイザーPMC — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ヘルメット団": {
+      "label": "THREAT FILE",
+      "text": "ヘルメット団 — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::スケバン": {
+      "label": "THREAT FILE",
+      "text": "スケバン — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::暴走族": {
+      "label": "THREAT FILE",
+      "text": "暴走族 — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::不良生徒": {
+      "label": "THREAT FILE",
+      "text": "不良生徒 — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::アリウススクワッド": {
+      "label": "THREAT FILE",
+      "text": "アリウススクワッド — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ゲマトリア": {
+      "label": "THREAT FILE",
+      "text": "ゲマトリア — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::七囚人": {
+      "label": "THREAT FILE",
+      "text": "七囚人 — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ビナー": {
+      "label": "THREAT FILE",
+      "text": "ビナー — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ケセド": {
+      "label": "THREAT FILE",
+      "text": "ケセド — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::シロ＆クロ": {
+      "label": "THREAT FILE",
+      "text": "シロ＆クロ — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ヒエロニムス": {
+      "label": "THREAT FILE",
+      "text": "ヒエロニムス — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ホド": {
+      "label": "THREAT FILE",
+      "text": "ホド — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::カイテンジャー": {
+      "label": "THREAT FILE",
+      "text": "カイテンジャー — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::カイテンFX Mk.0": {
+      "label": "THREAT FILE",
+      "text": "カイテンFX Mk.0 — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ペロロジラ": {
+      "label": "THREAT FILE",
+      "text": "ペロロジラ — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ゴズ": {
+      "label": "THREAT FILE",
+      "text": "ゴズ — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::グレゴリオ": {
+      "label": "THREAT FILE",
+      "text": "グレゴリオ — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ワカモ（ホバークラフト）": {
+      "label": "THREAT FILE",
+      "text": "ワカモ（ホバークラフト） — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::クロカゲ": {
+      "label": "THREAT FILE",
+      "text": "クロカゲ — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::セトの憤怒": {
+      "label": "THREAT FILE",
+      "text": "セトの憤怒 — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::コクマー": {
+      "label": "THREAT FILE",
+      "text": "コクマー — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ゲブラ": {
+      "label": "THREAT FILE",
+      "text": "ゲブラ — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ペロロミニオン": {
+      "label": "THREAT FILE",
+      "text": "ペロロミニオン — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ホバークラフト": {
+      "label": "THREAT FILE",
+      "text": "ホバークラフト — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ディヴィ・シムラ": {
+      "label": "THREAT FILE",
+      "text": "ディヴィ・シムラ — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::ミメシス": {
+      "label": "THREAT FILE",
+      "text": "ミメシス — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "enemies::アバンギャルド君": {
+      "label": "THREAT FILE",
+      "text": "アバンギャルド君 — 対処または警戒対象となる敵性勢力・戦闘上の脅威。"
+    },
+    "schools::キヴォトス": {
+      "label": "ORGANIZATION FILE",
+      "text": "キヴォトス — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::アビドス高等学校": {
+      "label": "ORGANIZATION FILE",
+      "text": "アビドス高等学校 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::ゲヘナ学園": {
+      "label": "ORGANIZATION FILE",
+      "text": "ゲヘナ学園 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::ミレニアムサイエンススクール": {
+      "label": "ORGANIZATION FILE",
+      "text": "ミレニアムサイエンススクール — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::トリニティ総合学園": {
+      "label": "ORGANIZATION FILE",
+      "text": "トリニティ総合学園 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::百鬼夜行連合学院": {
+      "label": "ORGANIZATION FILE",
+      "text": "百鬼夜行連合学院 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::山海経高級中学校": {
+      "label": "ORGANIZATION FILE",
+      "text": "山海経高級中学校 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::レッドウィンター連邦学園": {
+      "label": "ORGANIZATION FILE",
+      "text": "レッドウィンター連邦学園 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::ヴァルキューレ警察学校": {
+      "label": "ORGANIZATION FILE",
+      "text": "ヴァルキューレ警察学校 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::SRT特殊学園": {
+      "label": "ORGANIZATION FILE",
+      "text": "SRT特殊学園 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::アリウス分校": {
+      "label": "ORGANIZATION FILE",
+      "text": "アリウス分校 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::ハイランダー鉄道学園": {
+      "label": "ORGANIZATION FILE",
+      "text": "ハイランダー鉄道学園 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::ワイルドハント芸術学院": {
+      "label": "ORGANIZATION FILE",
+      "text": "ワイルドハント芸術学院 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::オデュッセイア海洋学校": {
+      "label": "ORGANIZATION FILE",
+      "text": "オデュッセイア海洋学校 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::クロノススクール": {
+      "label": "ORGANIZATION FILE",
+      "text": "クロノススクール — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::常盤台中学校": {
+      "label": "ORGANIZATION FILE",
+      "text": "常盤台中学校 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::柵川中学校": {
+      "label": "ORGANIZATION FILE",
+      "text": "柵川中学校 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::連邦生徒会": {
+      "label": "ORGANIZATION FILE",
+      "text": "連邦生徒会 — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "schools::シャーレ": {
+      "label": "ORGANIZATION FILE",
+      "text": "シャーレ — キヴォトスの学園、自治区、または統治組織。"
+    },
+    "clubs::対策委員会": {
+      "label": "TEAM FILE",
+      "text": "対策委員会 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::アビドス生徒会": {
+      "label": "TEAM FILE",
+      "text": "アビドス生徒会 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::便利屋68": {
+      "label": "TEAM FILE",
+      "text": "便利屋68 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::美食研究会": {
+      "label": "TEAM FILE",
+      "text": "美食研究会 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::万魔殿": {
+      "label": "TEAM FILE",
+      "text": "万魔殿 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::風紀委員会": {
+      "label": "TEAM FILE",
+      "text": "風紀委員会 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::キラキラ部": {
+      "label": "TEAM FILE",
+      "text": "キラキラ部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::トレーニング部": {
+      "label": "TEAM FILE",
+      "text": "トレーニング部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::給食部": {
+      "label": "TEAM FILE",
+      "text": "給食部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::救急医学部": {
+      "label": "TEAM FILE",
+      "text": "救急医学部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::セミナー": {
+      "label": "TEAM FILE",
+      "text": "セミナー — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::C&C": {
+      "label": "TEAM FILE",
+      "text": "C&C — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::ヴェリタス": {
+      "label": "TEAM FILE",
+      "text": "ヴェリタス — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::ゲーム開発部": {
+      "label": "TEAM FILE",
+      "text": "ゲーム開発部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::エンジニア部": {
+      "label": "TEAM FILE",
+      "text": "エンジニア部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::特異現象捜査部": {
+      "label": "TEAM FILE",
+      "text": "特異現象捜査部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::中央管制室": {
+      "label": "TEAM FILE",
+      "text": "中央管制室 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::オカルト研究部": {
+      "label": "TEAM FILE",
+      "text": "オカルト研究部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::出版部": {
+      "label": "TEAM FILE",
+      "text": "出版部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::自由貿易連合": {
+      "label": "TEAM FILE",
+      "text": "自由貿易連合 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::トリニティ自警団": {
+      "label": "TEAM FILE",
+      "text": "トリニティ自警団 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::ティーパーティー": {
+      "label": "TEAM FILE",
+      "text": "ティーパーティー — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::補習授業部": {
+      "label": "TEAM FILE",
+      "text": "補習授業部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::正義実現委員会": {
+      "label": "TEAM FILE",
+      "text": "正義実現委員会 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::救護騎士団": {
+      "label": "TEAM FILE",
+      "text": "救護騎士団 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::シスターフッド": {
+      "label": "TEAM FILE",
+      "text": "シスターフッド — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::図書委員会": {
+      "label": "TEAM FILE",
+      "text": "図書委員会 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::放課後スイーツ部": {
+      "label": "TEAM FILE",
+      "text": "放課後スイーツ部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::百花繚乱紛争調停委員会": {
+      "label": "TEAM FILE",
+      "text": "百花繚乱紛争調停委員会 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::忍術研究部": {
+      "label": "TEAM FILE",
+      "text": "忍術研究部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::修行部": {
+      "label": "TEAM FILE",
+      "text": "修行部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::陰陽部": {
+      "label": "TEAM FILE",
+      "text": "陰陽部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::お祭り運営委員会": {
+      "label": "TEAM FILE",
+      "text": "お祭り運営委員会 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::玄龍門": {
+      "label": "TEAM FILE",
+      "text": "玄龍門 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::玄武商会": {
+      "label": "TEAM FILE",
+      "text": "玄武商会 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::錬丹術研究部": {
+      "label": "TEAM FILE",
+      "text": "錬丹術研究部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::梅花園": {
+      "label": "TEAM FILE",
+      "text": "梅花園 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::レッドウィンター事務局": {
+      "label": "TEAM FILE",
+      "text": "レッドウィンター事務局 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::227号特別クラス": {
+      "label": "TEAM FILE",
+      "text": "227号特別クラス — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::知識解放戦線": {
+      "label": "TEAM FILE",
+      "text": "知識解放戦線 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::温泉開発部": {
+      "label": "TEAM FILE",
+      "text": "温泉開発部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::公安局": {
+      "label": "TEAM FILE",
+      "text": "公安局 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::生活安全局": {
+      "label": "TEAM FILE",
+      "text": "生活安全局 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::RABBIT小隊": {
+      "label": "TEAM FILE",
+      "text": "RABBIT小隊 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::FOX小隊": {
+      "label": "TEAM FILE",
+      "text": "FOX小隊 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::ダイビング部": {
+      "label": "TEAM FILE",
+      "text": "ダイビング部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::物流部": {
+      "label": "TEAM FILE",
+      "text": "物流部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::工務部": {
+      "label": "TEAM FILE",
+      "text": "工務部 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::労働党": {
+      "label": "TEAM FILE",
+      "text": "労働党 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "clubs::ニコメディア小隊": {
+      "label": "TEAM FILE",
+      "text": "ニコメディア小隊 — 学園内で任務・自治・研究を担う部活、委員会、小隊。"
+    },
+    "terms::シッテムの箱": {
+      "label": "SETTING FILE",
+      "text": "シッテムの箱 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::聖域の塔": {
+      "label": "SETTING FILE",
+      "text": "聖域の塔 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::アトラ・ハシースの箱舟": {
+      "label": "SETTING FILE",
+      "text": "アトラ・ハシースの箱舟 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::D.U.": {
+      "label": "SETTING FILE",
+      "text": "D.U. — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::エリドゥ": {
+      "label": "SETTING FILE",
+      "text": "エリドゥ — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::アビドス自治区": {
+      "label": "SETTING FILE",
+      "text": "アビドス自治区 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::ヘイロー": {
+      "label": "SETTING FILE",
+      "text": "ヘイロー — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::神名文字": {
+      "label": "SETTING FILE",
+      "text": "神名文字 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::神名のカケラ": {
+      "label": "SETTING FILE",
+      "text": "神名のカケラ — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::オーパーツ": {
+      "label": "SETTING FILE",
+      "text": "オーパーツ — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::青輝石": {
+      "label": "SETTING FILE",
+      "text": "青輝石 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::クレジット": {
+      "label": "SETTING FILE",
+      "text": "クレジット — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::熟達証書": {
+      "label": "SETTING FILE",
+      "text": "熟達証書 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::戦術対抗戦": {
+      "label": "SETTING FILE",
+      "text": "戦術対抗戦 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::総力戦": {
+      "label": "SETTING FILE",
+      "text": "総力戦 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::大決戦": {
+      "label": "SETTING FILE",
+      "text": "大決戦 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::合同火力演習": {
+      "label": "SETTING FILE",
+      "text": "合同火力演習 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::制約解除決戦": {
+      "label": "SETTING FILE",
+      "text": "制約解除決戦 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::任務": {
+      "label": "SETTING FILE",
+      "text": "任務 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::特別依頼": {
+      "label": "SETTING FILE",
+      "text": "特別依頼 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::指名手配": {
+      "label": "SETTING FILE",
+      "text": "指名手配 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::拠点防衛": {
+      "label": "SETTING FILE",
+      "text": "拠点防衛 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::学園交流会": {
+      "label": "SETTING FILE",
+      "text": "学園交流会 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::カフェ": {
+      "label": "SETTING FILE",
+      "text": "カフェ — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::製造": {
+      "label": "SETTING FILE",
+      "text": "製造 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::クラフトチェンバー": {
+      "label": "SETTING FILE",
+      "text": "クラフトチェンバー — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::固有武器": {
+      "label": "SETTING FILE",
+      "text": "固有武器 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::愛用品": {
+      "label": "SETTING FILE",
+      "text": "愛用品 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::絆ランク": {
+      "label": "SETTING FILE",
+      "text": "絆ランク — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::EXスキル": {
+      "label": "SETTING FILE",
+      "text": "EXスキル — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::ノーマルスキル": {
+      "label": "SETTING FILE",
+      "text": "ノーマルスキル — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::パッシブスキル": {
+      "label": "SETTING FILE",
+      "text": "パッシブスキル — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::サブスキル": {
+      "label": "SETTING FILE",
+      "text": "サブスキル — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::爆発": {
+      "label": "SETTING FILE",
+      "text": "爆発 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::貫通": {
+      "label": "SETTING FILE",
+      "text": "貫通 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::神秘": {
+      "label": "SETTING FILE",
+      "text": "神秘 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::振動": {
+      "label": "SETTING FILE",
+      "text": "振動 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::分解": {
+      "label": "SETTING FILE",
+      "text": "分解 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::軽装備": {
+      "label": "SETTING FILE",
+      "text": "軽装備 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::重装甲": {
+      "label": "SETTING FILE",
+      "text": "重装甲 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::特殊装甲": {
+      "label": "SETTING FILE",
+      "text": "特殊装甲 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::弾力装甲": {
+      "label": "SETTING FILE",
+      "text": "弾力装甲 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::市街地戦": {
+      "label": "SETTING FILE",
+      "text": "市街地戦 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::屋外戦": {
+      "label": "SETTING FILE",
+      "text": "屋外戦 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::屋内戦": {
+      "label": "SETTING FILE",
+      "text": "屋内戦 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::エデン条約": {
+      "label": "SETTING FILE",
+      "text": "エデン条約 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::カルバノグの兎": {
+      "label": "SETTING FILE",
+      "text": "カルバノグの兎 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::パヴァーヌ編": {
+      "label": "SETTING FILE",
+      "text": "パヴァーヌ編 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::アビドス対策委員会編": {
+      "label": "SETTING FILE",
+      "text": "アビドス対策委員会編 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::エデン条約編": {
+      "label": "SETTING FILE",
+      "text": "エデン条約編 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::デカグラマトン編": {
+      "label": "SETTING FILE",
+      "text": "デカグラマトン編 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::百花繚乱編": {
+      "label": "SETTING FILE",
+      "text": "百花繚乱編 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::シャーレ": {
+      "label": "SETTING FILE",
+      "text": "シャーレ — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::先生レベル": {
+      "label": "SETTING FILE",
+      "text": "先生レベル — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::戦術教育BD": {
+      "label": "SETTING FILE",
+      "text": "戦術教育BD — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::技術ノート": {
+      "label": "SETTING FILE",
+      "text": "技術ノート — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::秘伝ノート": {
+      "label": "SETTING FILE",
+      "text": "秘伝ノート — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::レポート": {
+      "label": "SETTING FILE",
+      "text": "レポート — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::クレジットポイント": {
+      "label": "SETTING FILE",
+      "text": "クレジットポイント — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::DIVE into OCEAN！": {
+      "label": "SETTING FILE",
+      "text": "DIVE into OCEAN！ — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::海底調査": {
+      "label": "SETTING FILE",
+      "text": "海底調査 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::ゴールデンフリース号": {
+      "label": "SETTING FILE",
+      "text": "ゴールデンフリース号 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    },
+    "terms::水中用フレシェット弾": {
+      "label": "SETTING FILE",
+      "text": "水中用フレシェット弾 — キヴォトスの設定、育成、または戦闘に関わる用語。"
+    }
+  }
 }
