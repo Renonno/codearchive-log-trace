@@ -318,13 +318,11 @@
                 </fieldset>
                 <div class="mt-3 rounded-xl border border-violet-200/80 bg-violet-50/70 p-3">
                   <div class="flex flex-wrap items-center gap-2">
-                    <input id="contentConfigInput" type="file" accept="application/json,.json" class="hidden">
-                    <button id="importContentBtn" type="button" class="min-h-11 rounded-lg border border-violet-300 bg-white px-3 text-sm font-black text-violet-700 transition hover:bg-violet-100">編集アプリの設定を読み込む</button>
-                    <span id="contentConfigStatus" class="text-xs font-bold text-violet-700">標準カードセットを使用中</span>
+                    <span id="contentConfigStatus" class="text-xs font-bold text-violet-700">カード設定を確認中...</span>
                   </div>
-                  <p class="mt-2 text-xs leading-relaxed text-violet-700/80">カードや作戦メモの編集は同梱の <b>ContentEditor.html</b> で行い、書き出したJSONをここから読み込みます。</p>
+                  <p class="mt-2 text-xs leading-relaxed text-violet-700/80">カード内容と作戦メモは管理者が更新しています。ゲーム開始時に公開済みの最新設定を適用します。</p>
                 </div>
-                <button id="createRoomBtn" class="mt-5 w-full min-h-12 rounded-xl bg-academy hover:bg-sky-600 text-white font-black shadow-lg shadow-sky-200 transition">この設定でルームIDを発行</button>
+                <button id="createRoomBtn" disabled class="mt-5 w-full min-h-12 rounded-xl bg-academy hover:bg-sky-600 text-white font-black shadow-lg shadow-sky-200 transition disabled:cursor-wait disabled:opacity-60">カード設定を確認中...</button>
                 <div id="roomBox" class="hidden mt-4 rounded-xl border border-dashed border-sky-300 bg-sky-50 p-4">
                   <p class="text-xs font-bold text-sky-700">YOUR ROOM ID</p><div class="flex items-center gap-2 mt-2"><code id="roomIdText" class="min-w-0 flex-1 text-lg font-black text-slate-700 break-all">---</code><button id="copyRoomBtn" class="shrink-0 px-3 py-2 rounded-lg bg-white border border-sky-200 text-sky-600 font-bold">コピー</button></div>
                   <p id="waitingText" class="mt-3 text-sm text-slate-500">通信局へ接続中...</p>
@@ -433,7 +431,7 @@
       ]
     };
     const CONTENT_CONFIG_SCHEMA = 'log-trace-content-v1';
-    const CONTENT_CONFIG_STORAGE_KEY = 'log-trace-content-config-v1';
+    const PUBLISHED_CONTENT_CONFIG_URL = './content.json';
     const DEFAULT_VOCABULARY = Object.fromEntries(Object.entries(VOCABULARY).map(([key, words])=>[key,[...words]]));
     let activeCardNotes = {};
     let loadedContentName = '標準カードセットを使用中';
@@ -447,7 +445,7 @@
       'アビドス高等学校':['ホシノ','シロコ','セリカ','ノノミ','アヤネ'], 'ゲヘナ学園':['アル','ハルナ','ヒナ','イオリ','イズミ','ジュンコ','アカリ','ムツキ','カヨコ','ハルカ','アコ','チナツ','ジュリ','マコト','サツキ','イロハ','イブキ','カスミ','ミノリ','メグ'], 'ミレニアムサイエンススクール':['エイミ','ネル','アリス','ミドリ','ユズ','ノア','ユウカ','コトリ','ハレ','ウタハ','ヒビキ','カリン','アスナ','アカネ','チヒロ','ヒマリ','マキ','モモイ','コユキ','リオ','トキ','ケイ'], 'トリニティ総合学園':['ヒフミ','ツルギ','アズサ','コハル','ナツ','ウイ','ヒナタ','ミネ','ミカ','サクラコ','イチカ','カズサ','レイサ','マリー','ハスミ','ハナコ','セリナ','スズミ','ヨシミ','ノドカ','サクラコ'], '百鬼夜行連合学院':['イズナ','チセ','ツクヨ','ミチル','カホ','ユカリ','レンゲ','キキョウ','ナグサ','ニヤ'], 'レッドウィンター連邦学園':['チェリノ','マリナ','トモエ','シグレ','ミノリ'], '山海経高級中学校':['シュン','ココナ','サヤ','ルミ','ミナ','キサキ'], 'SRT特殊学園':['ミヤコ','ミユ','サキ','モエ','フブキ'], 'アリウス分校':['サオリ','ミサキ','アツコ','ヒヨリ'], 'ヴァルキューレ警察学校':['キリノ','カンナ','ラブ'], 'ハイランダー鉄道学園':['ヒカリ','ノゾミ'], 'オデュッセイア海洋高等学校':['ココロ','コトネ','渡海ココロ','淵上コトネ'], 'コラボレーション':['御坂美琴','食蜂操祈','初音ミク','佐天涙子']
     };
     const $ = id => document.getElementById(id);
-    const el = { lobby:$('lobby'), game:$('game'), board:$('board'), keyGrid:$('keyGrid'), keyCard:$('keyCard'), keyToggle:$('keyToggle'), roleLabel:$('roleLabel'), phaseLabel:$('phaseLabel'), targetCount:$('targetCount'), batteryCount:$('batteryCount'), batteryBars:$('batteryBars'), turnInstruction:$('turnInstruction'), endTurnBtn:$('endTurnBtn'), chatLog:$('chatLog'), clueForm:$('clueForm'), clueWord:$('clueWord'), clueNumber:$('clueNumber'), sendClueBtn:$('sendClueBtn'), connectionDot:$('connectionDot'), connectionText:$('connectionText'), lobbyError:$('lobbyError'), resultModal:$('resultModal'), toast:$('toast'), fxLayer:$('fxLayer'), app:$('app'), categoryToggles:[...document.querySelectorAll('.category-toggle')], categorySummary:$('categorySummary'), resultBoard:$('resultBoard'), cardInfoTooltip:$('cardInfoTooltip'), analysisHud:$('analysisHud'), analysisReadout:$('analysisReadout'), contentConfigInput:$('contentConfigInput'), importContentBtn:$('importContentBtn'), contentConfigStatus:$('contentConfigStatus') };
+    const el = { lobby:$('lobby'), game:$('game'), board:$('board'), keyGrid:$('keyGrid'), keyCard:$('keyCard'), keyToggle:$('keyToggle'), roleLabel:$('roleLabel'), phaseLabel:$('phaseLabel'), targetCount:$('targetCount'), batteryCount:$('batteryCount'), batteryBars:$('batteryBars'), turnInstruction:$('turnInstruction'), endTurnBtn:$('endTurnBtn'), chatLog:$('chatLog'), clueForm:$('clueForm'), clueWord:$('clueWord'), clueNumber:$('clueNumber'), sendClueBtn:$('sendClueBtn'), connectionDot:$('connectionDot'), connectionText:$('connectionText'), lobbyError:$('lobbyError'), resultModal:$('resultModal'), toast:$('toast'), fxLayer:$('fxLayer'), app:$('app'), categoryToggles:[...document.querySelectorAll('.category-toggle')], categorySummary:$('categorySummary'), resultBoard:$('resultBoard'), cardInfoTooltip:$('cardInfoTooltip'), analysisHud:$('analysisHud'), analysisReadout:$('analysisReadout'), contentConfigStatus:$('contentConfigStatus') };
     let peer = null, conn = null, role = null, isHost = false, state = null, busy = false, firstBoardRender = true, resultTimer = null, pendingResultKey = '';
     let hostCategories = [...DEFAULT_CATEGORY_KEYS];
     function normalizeContentWord(value){ return String(value||'').trim().replace(/\s+/g,' ').slice(0,48); }
@@ -468,12 +466,24 @@
       activeCardNotes=normalizeCardNotes(config.cardNotes);
       loadedContentName=label || config.name || 'カスタム設定を使用中'; el.contentConfigStatus.textContent=loadedContentName; updateCategorySummary();
     }
-    function readContentConfig(file){
-      if(!file) return; if(file.size>1024*1024){ showError('設定ファイルが大きすぎます（1MB以下にしてください）。'); return; }
-      const reader=new FileReader(); reader.onload=()=>{ try { const config=JSON.parse(String(reader.result||'')); if(config.schema && config.schema!==CONTENT_CONFIG_SCHEMA) throw new Error('この設定ファイルの種類には対応していません。'); applyContentConfig(config, config.name || `${file.name} を読み込み済み`); try { localStorage.setItem(CONTENT_CONFIG_STORAGE_KEY,JSON.stringify(config)); } catch {} playSound('confirm',.28); toast('カード・ホバー作戦メモ設定を読み込みました'); } catch(error) { playSound('warning',.3); showError(error.message || '設定ファイルを読み込めませんでした。'); } };
-      reader.onerror=()=>showError('設定ファイルを読み込めませんでした。'); reader.readAsText(file,'utf-8');
+    async function loadPublishedContentConfig(){
+      el.contentConfigStatus.textContent='公開済みカード設定を確認中...';
+      try {
+        const response=await fetch(`${PUBLISHED_CONTENT_CONFIG_URL}?v=${Date.now()}`,{cache:'no-store'});
+        if(response.status===404){ loadedContentName='標準カードセットを使用中'; el.contentConfigStatus.textContent=loadedContentName; return; }
+        if(!response.ok) throw new Error('公開設定を取得できませんでした。');
+        const config=await response.json();
+        if(config.schema && config.schema!==CONTENT_CONFIG_SCHEMA) throw new Error('公開設定の形式が正しくありません。');
+        applyContentConfig(config,config.name || '最新カード設定を適用中');
+      } catch(error) {
+        loadedContentName='標準カードセットを使用中';
+        el.contentConfigStatus.textContent=loadedContentName;
+      } finally {
+        $('createRoomBtn').disabled=false;
+        $('createRoomBtn').textContent='この設定でルームIDを発行';
+        updateCategorySummary();
+      }
     }
-    function restoreStoredContentConfig(){ try { const raw=localStorage.getItem(CONTENT_CONFIG_STORAGE_KEY); if(raw) applyContentConfig(JSON.parse(raw),'前回読み込んだカスタム設定を使用中'); } catch {} }
     function getSelectedCategories(){ return el.categoryToggles.filter(input=>input.checked).map(input=>input.value); }
     function updateCategorySummary(){ const categories=getSelectedCategories(), pool=getWordPool(categories), labels=categories.map(key=>CATEGORY_META[key].label).join('・'); el.categorySummary.textContent=pool.length>=25?`選択中: ${labels || 'なし'} / 候補 ${pool.length}語`:`候補が${pool.length}語です。盤面には25語以上必要です。カテゴリを追加してください。`; el.categorySummary.classList.toggle('invalid',pool.length<25); }
 
@@ -679,10 +689,8 @@
     el.endTurnBtn.addEventListener('click',()=>{ playSound('cancel',.34); requestAction('endTurn'); });
     el.keyToggle.addEventListener('click',()=>{ playSound('cursor',.24); const opening=el.keyCard.classList.contains('hidden'); el.keyCard.classList.toggle('hidden'); el.keyToggle.textContent=opening?'キーカードを閉じる':'キーカード'; el.keyToggle.setAttribute('aria-expanded',String(opening)); });
     $('copyRoomBtn').addEventListener('click',async()=>{ try{ await navigator.clipboard.writeText($('roomIdText').textContent); playSound('confirm',.28); toast('ルームIDをコピーしました'); } catch { playSound('warning',.32); toast('IDを選択してコピーしてください'); } });
-    el.importContentBtn.addEventListener('click',()=>{ if($('createRoomBtn').disabled){ toast('ルームID発行前に設定を読み込んでください'); return; } el.contentConfigInput.click(); });
-    el.contentConfigInput.addEventListener('change',()=>{ readContentConfig(el.contentConfigInput.files?.[0]); el.contentConfigInput.value=''; });
     $('backLobbyBtn').addEventListener('click',()=>location.reload());
-    restoreStoredContentConfig();
+    loadPublishedContentConfig();
     el.categoryToggles.forEach(input=>input.addEventListener('change',()=>{ playSound('cursor',.18); updateCategorySummary(); })); updateCategorySummary();
     $('hostTab').addEventListener('click',()=>switchTab(true)); $('guestTab').addEventListener('click',()=>switchTab(false));
     function switchTab(host){ $('hostPanel').classList.toggle('hidden',!host); $('guestPanel').classList.toggle('hidden',host); $('hostTab').className=`flex-1 py-2.5 px-3 rounded-lg font-bold ${host?'bg-white text-sky-600 shadow-sm':'text-slate-500'}`; $('guestTab').className=`flex-1 py-2.5 px-3 rounded-lg font-bold ${!host?'bg-white text-sky-600 shadow-sm':'text-slate-500'}`; $('hostTab').setAttribute('aria-selected',String(host)); $('guestTab').setAttribute('aria-selected',String(!host)); clearError(); }
