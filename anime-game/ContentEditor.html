@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>アニメ・ゲーム版 カード編集</title>
+  <style>
+    :root{font-family:"Noto Sans JP","Yu Gothic UI",system-ui,sans-serif;color:#f5edff;background:#130f21}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 90% 0,#513068 0,transparent 28rem),#130f21}button,input,textarea{font:inherit}button{cursor:pointer}main{max-width:1180px;margin:auto;padding:24px 16px 56px}header{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:20px}h1{font-size:clamp(25px,4vw,40px);margin:4px 0}p{line-height:1.5}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.18em;color:#ffc875}.muted{color:#b7a8ca;font-size:13px}.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:16px}.panel{border:1px solid #7b5b9a88;border-radius:18px;background:#241a36;padding:18px;box-shadow:0 16px 40px #08051040}.media-list{display:grid;gap:8px}.media-list button,.card-list button{width:100%;text-align:left;border:1px solid #6f5a8680;border-radius:10px;background:#171126;color:#f4eaff;padding:10px}.media-list button.active,.card-list button.active{border-color:#ffc875;background:#493061}.media-list small,.card-list small{float:right;color:#c8abd9}.content-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,.95fr);gap:18px}.field{margin-bottom:13px}.field label{display:block;margin-bottom:6px;font-size:12px;font-weight:800}.field input,.field textarea{width:100%;min-height:43px;border:1px solid #7b648d;border-radius:9px;background:#130f21;color:white;padding:9px 11px}.field textarea{min-height:108px;resize:vertical}.card-list{display:grid;gap:5px;max-height:470px;overflow:auto;margin-top:10px}.toolbar,.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.button{border:0;border-radius:9px;background:#d8a7ff;color:#241235;padding:11px 14px;font-weight:900}.button.secondary{background:#56406b;color:#fff}.button.danger{background:#79384f;color:#fff}.button:disabled{opacity:.45;cursor:default}.file{position:relative;overflow:hidden}.file input{position:absolute;inset:0;opacity:0;cursor:pointer}.status{min-height:23px;color:#ffdb93;font-size:13px}.save-state{white-space:nowrap}@media(max-width:850px){.layout,.content-grid{grid-template-columns:1fr}.media-list{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+<main>
+  <header><div><div class="eyebrow">ANIME × GAME CARD DATABASE</div><h1>アニメ・ゲーム版 カード編集</h1><p class="muted">作品名・媒体・初回放送／発売年・ホバーメモを編集できます。</p></div><span id="saveState" class="muted save-state">読み込み中...</span></header>
+  <div class="layout">
+    <aside class="panel"><div class="eyebrow">MEDIA</div><p class="muted">カードの媒体を選択</p><div id="mediaList" class="media-list"></div></aside>
+    <section class="panel"><div class="content-grid">
+      <div><div class="field"><label for="search">カード検索</label><input id="search" placeholder="作品名・年・メモ" autocomplete="off"></div><div id="count" class="muted"></div><div id="cardList" class="card-list"></div><div class="toolbar"><button id="add" class="button">カードを追加</button><button id="remove" class="button danger">選択カードを削除</button></div></div>
+      <div><div class="eyebrow">CARD DETAILS</div><p id="selection" class="muted">カードを選択してください。</p><div class="field"><label for="name">カード名</label><input id="name" maxlength="48"></div><div class="field"><label for="year">初回放送・公開年／初作発売年</label><input id="year" type="number" min="1960" max="2026" required></div><div class="field"><label for="noteLabel">ホバーメモ見出し</label><input id="noteLabel" maxlength="44"></div><div class="field"><label for="noteText">ホバーメモ本文</label><textarea id="noteText" maxlength="180"></textarea></div><p class="muted">メモを設定しても、ホバー情報には年が表示されます。</p><button id="save" class="button">カードを保存</button><p id="message" class="status" role="status"></p></div>
+    </div></section>
+  </div>
+  <section class="panel" style="margin-top:16px"><div class="actions"><label class="button secondary file">JSONを読み込む<input id="importFile" type="file" accept=".json,application/json"></label><button id="export" class="button">content.jsonを書き出す</button><button id="reset" class="button danger">初期状態に戻す</button></div><p class="muted">書き出したcontent.jsonを、このゲームのindex.htmlと同じフォルダへ置くとカード設定が反映されます。編集内容はブラウザ内に自動保存されます。</p></section>
+</main>
+<script src="./anime-game-data.js"></script>
+<script>
+(()=>{'use strict';
+  const BASE=window.ANIME_GAME_BASE_DATA, STORAGE='anime-game-coop-editor-v1', KEYS=['anime','game'];
+  const $=id=>document.getElementById(id), clone=value=>structuredClone(value);
+  const mediaLabel=group=>group==='anime'?'アニメ':'ゲーム';
+  const key=(group,name)=>`${group}::${name}`;
+  const clean=(value,max=48)=>String(value||'').trim().replace(/\s+/g,' ').slice(0,max);
+  let data=clone(BASE), medium='anime', selected=null, query='';
+  function persist(){localStorage.setItem(STORAGE,JSON.stringify(data));$('saveState').textContent='自動保存済み'}
+  function apply(input){
+    if(input?.schema!==BASE.schema||!input.vocabulary||!input.cardMetadata)throw Error('対応していないカード設定です');
+    const next=clone(BASE), seen=new Set();next.vocabulary={anime:[],game:[]};next.cardMetadata={};next.cardNotes={};
+    for(const group of KEYS)for(const original of Array.isArray(input.vocabulary[group])?input.vocabulary[group]:[]){
+      const name=clean(original),cardKey=key(group,name),year=Number(input.cardMetadata[cardKey]?.year);
+      if(!name||seen.has(name)||!Number.isInteger(year)||year<1960||year>2026)continue;
+      seen.add(name);next.vocabulary[group].push(name);next.cardMetadata[cardKey]={year};
+      const note=input.cardNotes?.[cardKey];if(note&&(note.label||note.text))next.cardNotes[cardKey]={label:clean(note.label,44),text:clean(note.text,180)};
+    }
+    data=next;selected=null;medium='anime';persist();render();
+  }
+  function list(){const result=[];for(const group of KEYS)for(const name of data.vocabulary[group]){const meta=data.cardMetadata[key(group,name)]||{},note=data.cardNotes[key(group,name)]||{};if(!query||[name,meta.year,note.label,note.text].join(' ').toLocaleLowerCase('ja-JP').includes(query))result.push({group,name})}return query?result:result.filter(item=>item.group===medium)}
+  function render(){
+    const media=$('mediaList');media.replaceChildren();for(const group of KEYS){const button=document.createElement('button'),count=document.createElement('small');button.textContent=mediaLabel(group);count.textContent=data.vocabulary[group].length;button.append(count);button.className=group===medium&&!query?'active':'';button.onclick=()=>{medium=group;selected=null;query='';$('search').value='';render()};media.append(button)}
+    const items=list(),cards=$('cardList');cards.replaceChildren();$('count').textContent=`${items.length}件${query?'（全媒体検索）':''}`;
+    for(const item of items){const button=document.createElement('button'),note=document.createElement('small');button.textContent=item.name;note.textContent=String(data.cardMetadata[key(item.group,item.name)]?.year||'');button.append(note);button.className=selected?.group===item.group&&selected?.name===item.name?'active':'';button.onclick=()=>{selected=item;medium=item.group;render()};cards.append(button)}
+    const current=selected&&data.vocabulary[selected.group].includes(selected.name)?selected:null,meta=current?data.cardMetadata[key(current.group,current.name)]||{}:{},note=current?data.cardNotes[key(current.group,current.name)]||{}:{};
+    $('selection').textContent=current?`${mediaLabel(current.group)} / ${current.name}`:`${mediaLabel(medium)}に新規カードを追加`;$('name').value=current?.name||'';$('year').value=meta.year||'';$('noteLabel').value=note.label||'';$('noteText').value=note.text||'';$('remove').disabled=!current;
+  }
+  function save(){
+    const name=clean($('name').value),year=Number($('year').value);
+    if(!name){$('message').textContent='カード名を入力してください。';return}
+    if(!Number.isInteger(year)||year<1960||year>2026){$('message').textContent='年は1960〜2026の整数で入力してください。';return}
+    if(KEYS.some(group=>data.vocabulary[group].includes(name)&&!(selected?.group===group&&selected?.name===name))){$('message').textContent='同じ名前のカードがすでにあります。';return}
+    if(selected){const old=key(selected.group,selected.name);data.vocabulary[selected.group]=data.vocabulary[selected.group].filter(value=>value!==selected.name);delete data.cardMetadata[old];delete data.cardNotes[old]}
+    data.vocabulary[medium].push(name);const cardKey=key(medium,name);data.cardMetadata[cardKey]={year};const label=clean($('noteLabel').value,44),text=clean($('noteText').value,180);if(label||text)data.cardNotes[cardKey]={label,text};selected={group:medium,name};persist();render();$('message').textContent='保存しました。';
+  }
+  $('search').oninput=()=>{query=clean($('search').value,180).toLocaleLowerCase('ja-JP');selected=null;render()};$('add').onclick=()=>{selected=null;render();$('name').focus()};$('save').onclick=save;
+  $('remove').onclick=()=>{if(!selected||!confirm(`「${selected.name}」を削除しますか？`))return;data.vocabulary[selected.group]=data.vocabulary[selected.group].filter(value=>value!==selected.name);delete data.cardMetadata[key(selected.group,selected.name)];delete data.cardNotes[key(selected.group,selected.name)];selected=null;persist();render()};
+  $('reset').onclick=()=>{if(!confirm('すべての編集内容を初期状態に戻しますか？'))return;data=clone(BASE);selected=null;medium='anime';query='';$('search').value='';persist();render()};
+  $('export').onclick=()=>{const output={...data,version:1,name:'アニメ・ゲーム版 カスタムカード設定',exportedAt:new Date().toISOString()};const url=URL.createObjectURL(new Blob([JSON.stringify(output,null,2)],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='content.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+  $('importFile').onchange=async event=>{try{const file=event.target.files?.[0];if(file)apply(JSON.parse(await file.text()));$('message').textContent='読み込みました。'}catch(error){$('message').textContent=error.message||'読み込めませんでした。'}event.target.value=''};
+  try{const saved=localStorage.getItem(STORAGE);if(saved)apply(JSON.parse(saved));else render()}catch{data=clone(BASE);render()}$('saveState').textContent='自動保存済み';
+})();
+</script>
+</body>
+</html>
